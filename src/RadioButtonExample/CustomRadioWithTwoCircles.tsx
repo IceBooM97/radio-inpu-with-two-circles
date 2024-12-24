@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Radio, styled } from '@mui/material'
+import { Radio, styled } from '@mui/material'
 
 const CustomRadio = styled(Radio)(() => ({
   '&.MuiRadio-root': {
@@ -15,22 +15,22 @@ const CustomRadio = styled(Radio)(() => ({
     width: 16,
     height: 16,
     borderRadius: '50%',
-    border: ' 3px solid #6366F1',
+    border: '2px solid #6366F1',
     transition: 'all 0.2s ease-in-out',
   },
   '&::after': {
     content: '""',
     position: 'absolute',
     display: 'block',
-    width: 4,
-    height: 4,
+    width: 8,
+    height: 8,
     borderRadius: '50%',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%) scale(0)',
     transition: 'transform 0.2s ease-in-out',
     backgroundColor: 'white',
-    border: '3px solid #6366F1'
+    border: '2px solid #6366F1'
   },
   '&.Mui-checked': {
     '&::before': {
@@ -42,12 +42,6 @@ const CustomRadio = styled(Radio)(() => ({
   },
 }))
 
-export default function CustomRadioWithTwoCircles() {
-  return (  
-    <Box sx={{display: 'flex', flexDirection: 'column'}}>
-      <CustomRadio /> 
-      <CustomRadio />    
-    </Box>       
-  )
-}
-
+export default function CustomRadioInput(props: any) {
+    return <CustomRadio {...props} />
+  }
